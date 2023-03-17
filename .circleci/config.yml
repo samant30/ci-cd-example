@@ -37,6 +37,9 @@ jobs:
           at: .
       - checkout
       - run: aws s3 sync ./app/build s3://ci-cd-example12
+      ${AWS_ACCESS_KEY}
+      ${AWS_REGION}
+      ${WS_SECERET_ACCESS_KEY}
     
 
 workflows:
