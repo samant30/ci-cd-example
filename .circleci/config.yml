@@ -39,7 +39,6 @@ jobs:
       - run: aws s3 sync ./app/build s3://ci-cd-example12
   
   aws-cli-cred-setup:
-    executor: aws-cli/default
     steps:
       - aws-cli/setup:
           aws-access-key-id: AWS_ACCESS_KEY_ID
