@@ -37,9 +37,14 @@ jobs:
           at: .
       - checkout
       - run: aws s3 sync ./app/build s3://ci-cd-example12
-      ${AWS_ACCESS_KEY}
-      ${AWS_REGION}
-      ${WS_SECERET_ACCESS_KEY}
+  
+  aws-cli-cred-setup:
+    executor: aws-cli/default
+    steps:
+      - aws-cli/setup:
+          aws-access-key-id: AWS_ACCESS_KEY_ID
+          aws-secret-access-key: AWS_SECERET_ACCESS_KEY
+          aws-region: AWS_REGION
     
 
 workflows:
