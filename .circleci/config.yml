@@ -44,12 +44,6 @@ jobs:
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECERET_ACCESS_KEY
           aws-region: AWS_REGION
-          
-  workflows:
-  aws-cli:
-    jobs:
-      - aws-cli-cred-setup:
-          context: aws
     
 
 workflows:
